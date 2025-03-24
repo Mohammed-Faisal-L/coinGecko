@@ -8,10 +8,11 @@ const Users = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:7777/user/getUsers", {
+      const response = await axios.get("https://www.coingecko.com/en/api", {
         withCredentials: true,
       });
       if (response) {
+        console.log(response);
         setUsers(response.data);
       }
     } catch (error) {
